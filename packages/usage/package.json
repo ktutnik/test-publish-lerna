@@ -1,8 +1,8 @@
 {
   "name": "urb-usage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
-    "urb-alpha": "^1.0.0",
-    "urb-beta": "^1.0.0"
+    "urb-alpha": "^1.0.1",
+    "urb-beta": "^1.0.1"
   }
 }
