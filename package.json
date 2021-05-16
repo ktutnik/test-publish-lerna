@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+		"publish:stable": "lerna publish --yes"
   },
   "devDependencies": {
     "@commitlint/cli": "^12.1.1",

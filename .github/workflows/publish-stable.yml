@@ -1,0 +1,32 @@
+name: "publish stable"
+
+on: [workflow_dispatch]
+  # schedule: 
+  #   - cron:  '* * 1,15 * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.3.1
+      with:
+          submodules: recursive
+    # Setup .npmrc file to publish to npm
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '12.x'
+        registry-url: 'https://registry.npmjs.org'
+    - name: Configure Git User
+      run: |
+        git config --global user.email "ci@plumierjs.com"
+        git config --global user.name "@$GITHUB_ACTOR"
+    - name: Install dependencies
+      run: yarn install
+    - name: Publish
+      run: |
+        yarn publish:stable
