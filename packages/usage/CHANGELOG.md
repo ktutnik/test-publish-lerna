@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.4 (2021-05-18)
+
+
+### Bug Fixes
+
+* Fix typos ([bcfc846](https://github.com/ktutnik/test-publish-lerna/commit/bcfc846251feb4bf2038bb584bc1c4f43718b987))
+
+
+
+
+
 ## 2.0.3 (2021-05-18)
 
 
