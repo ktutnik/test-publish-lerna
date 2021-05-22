@@ -1,3 +1,7 @@
+# resources 
+# https://docs.github.com/en/actions/guides/publishing-nodejs-packages#publishing-packages-to-the-npm-registry
+# https://stackoverflow.com/a/65831009/212706
+
 name: "publish stable"
 
 on: [workflow_dispatch]
@@ -13,11 +17,11 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - name: Checkout
-      uses: actions/checkout@v2.3.1
+      uses: actions/checkout@v2
       with:
           submodules: recursive
-    # Setup .npmrc file to publish to npm
-    - uses: actions/setup-node@v2
+    - name: Setup .npmrc file for publish
+      uses: actions/setup-node@v2
       with:
         node-version: '12.x'
         registry-url: 'https://registry.npmjs.org'
