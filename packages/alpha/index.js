@@ -1,1 +1,1 @@
-module.exports = function () { return 'alpha' };
+module.exports = function () { return 'apha' };
