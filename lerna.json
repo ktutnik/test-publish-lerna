@@ -1,6 +1,6 @@
 {
   "lerna": "4.0.0",
-  "version": "independent",
+  "version": "2.1.0",
   "command": {
     "publish": {
       "conventionalCommits": true,
